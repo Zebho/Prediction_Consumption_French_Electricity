@@ -25,3 +25,4 @@ mlruns
 #Autre
 Interview_folder/.enc
 Interview_folder/.envrc
+data/*
