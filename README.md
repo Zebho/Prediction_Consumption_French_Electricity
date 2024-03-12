@@ -25,29 +25,29 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">The Data</a></li>
+        <li><a href="#the-data">The Data</a></li>
       </ul>
       <ul>
-        <li><a href="#built-with">The Preprocessing</a></li>
+        <li><a href="#the-preprocessing">The Preprocessing</a></li>
       </ul>
       <ul>
-        <li><a href="#built-with">The Models</a></li>
+        <li><a href="#the-models">The Models</a></li>
       </ul>
       <ul>
-        <li><a href="#built-with">The Metrics</a></li>
+        <li><a href="#the-metrics">The Metrics</a></li>
       </ul>
       <ul>
-        <li><a href="#built-with">Improvements</a></li>
+        <li><a href="#improvementsh">Improvements</a></li>
       </ul>
     </li>
     <li>
-      <a href="#about-the-project">Built With</a>
+      <a href="#built-with">Built With</a>
     </li>
      <li>
-      <a href="#about-the-project">Licence</a>
+      <a href="#licence">Licence</a>
     </li>
      <li>
-      <a href="#about-the-project">Contacts</a>
+      <a href="#contacts">Contacts</a>
     </li>
   </ol>
 </details>
