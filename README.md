@@ -1,52 +1,18 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center"> Prediction of French electricity consumption using 4 ML models </h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Here is a project of my own, in which I tried to predict the French electricity consumption over 2 days with different models of Machine Learning.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Zebho/Prediction_Consumption_French_Electricity"><strong> Explore the docs </strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
 </div>
 
@@ -59,22 +25,30 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">The Data</a></li>
+      </ul>
+      <ul>
+        <li><a href="#built-with">The Preprocessing</a></li>
+      </ul>
+      <ul>
+        <li><a href="#built-with">The Models</a></li>
+      </ul>
+      <ul>
+        <li><a href="#built-with">The Metrics</a></li>
+      </ul>
+      <ul>
+        <li><a href="#built-with">Improvements</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#about-the-project">Built With</a>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+     <li>
+      <a href="#about-the-project">Licence</a>
+    </li>
+     <li>
+      <a href="#about-the-project">Contacts</a>
+    </li>
   </ol>
 </details>
 
@@ -82,122 +56,69 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+The aim of this project is to set up a prediction of French electricity consumption over 2 days using data available on the Internet. I've chosen this example because, firstly, it's a sector that particularly appeals to me and, secondly, all the data (former consumption or associated characteristics) are easily and freely accessible on the Internet.
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+The project therefore comprises 4 phases:
+* A phase of recovering the data needed for this modelling from various public sites,
+* A pre-processing phase is required to make the data usable for the different models,
+* Simple training on 4 types of model,
+* More complex training in order to compare the models in a more stable way.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+The training was carried out so that I could familiarise myself with them and then compare their effectiveness in a practical project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### The Data
+Toute la donnée a été récupéré sur des sites qui mettent à disposition la donnée gratuitement et publiquement. Elle a été récupéré sous forme de fichiers et non sous forme de requête APIs. Le notebook récupère donc les données les plus récentes sur les différents sites suivants :
+
+* The French electricity consumption in real time
+For example : [https://eco2mix.rte-france.com/download/eco2mix/eCO2mix_RTE_En-cours-TR.zip](eCO2mix_RTE_En-cours-TR)
+* The data which corresponds to half-hourly national temperature values (normal and actual) and actual pseudo-radiation values used by Enedis to establish and control regulatory energy balances (flow reconstitution) used for the production/consumption balance essential for maintaining the electricity network [https://www.data.gouv.fr/fr/datasets/donnees-de-temperature-et-de-pseudo-rayonnement-en-j-2/](Data.gouv Temperature Dataset)
+* The Tempo value for each day, on the ECO2Mix website [https://www.rte-france.com/en/eco2mix/download-indicators](ECO2Mix Indicators Website)
+  For example : [https://eco2mix.rte-france.com/curves/downloadCalendrierTempo?season=22-23](ECO2MIX_Tempo_2022-2023)
 
 
-### Built With
+### The Preprocessing
+The preprocessing is a classic one : one preprocess each dataset on his own and then merge the 3 in order to get one final big dataset, which is saved in a foder named "Data_Final".
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+We add the number of the weekday (0-6), if it is a schoolday or a public holday (0-1). Finally, one transform some variable into circulars ones in order to take into account the cyclical aspect of minutes/hours/days/months over the year.
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+I've added the lagged values of the consumption and the temperature in order to stabilise the model. We have 48 lagged values (24h of lagged) and 25 lagges values of temperature (12h), related to the 30-min steptime.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Finally, a robust scaler is used over all the numeric values and the Tempo values in OneHotEncoded.
+
+### The Models
+I have chosen 4 models :
+* The HistGradientBoostingRegressor
+* The LinearBoostRegressor
+* The GradientBoostingRegressor
+* The XGBOOST
+
+### The Metrics
+To compare them, I did 3 training sessions and compare their MAE and MAPE.
+* 1) Training between 2022-06-02 and 2024-03-08, which is 498 days. And comparison over 2 days following the train set.
+* 2) Comparison of results predictions over 2 days over 1 month apart (always stritcly 1 year's train)
+* 3) Comparison of results predictions over 2 days with 1 year and the previous days of the month (increasing the size of the train dataset each day)
+
+### Improvements
+Here is some improvments for this projects :
+* Add a Request directly on API,
+* Add others features which can be useful for the prediction,
+* Modify the scalers used,
+* Use others ML models,
+* Apply this projet on a Deep Learning point of view, with maybe a mix ML and DL.
 
 
+## Built With
 
-<!-- GETTING STARTED -->
-## Getting Started
+This section list any major frameworks/libraries used :
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+* SKLearn
+* vacances_scolaires_france
+* [https://github.com/cerlymarco/linear-tree](Lineartree)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- LICENSE -->
 ## License
@@ -211,32 +132,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Arthur DUBOIS - [@zebh0](https://twitter.com/zebh0) - arthurdubsm@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Project Link: [https://github.com/Zebho/Prediction_Consumption_French_Electricity?tab=readme-ov-file](https://github.com/Zebho/Prediction_Consumption_French_Electricity?tab=readme-ov-file)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
