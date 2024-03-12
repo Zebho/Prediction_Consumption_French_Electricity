@@ -70,17 +70,22 @@ The training was carried out so that I could familiarise myself with them and th
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### The Data
-Toute la donnée a été récupéré sur des sites qui mettent à disposition la donnée gratuitement et publiquement. Elle a été récupéré sous forme de fichiers et non sous forme de requête APIs. Le notebook récupère donc les données les plus récentes sur les différents sites suivants :
+All the data was retrieved from sites that make it freely and publicly available. It has been retrieved in the form of files and not in the form of API requests. The notebook therefore retrieves the most recent data from the following sites:
 
 * The French electricity consumption in real time
-For example : [https://eco2mix.rte-france.com/download/eco2mix/eCO2mix_RTE_En-cours-TR.zip](eCO2mix_RTE_En-cours-TR)
-* The data which corresponds to half-hourly national temperature values (normal and actual) and actual pseudo-radiation values used by Enedis to establish and control regulatory energy balances (flow reconstitution) used for the production/consumption balance essential for maintaining the electricity network [https://www.data.gouv.fr/fr/datasets/donnees-de-temperature-et-de-pseudo-rayonnement-en-j-2/](Data.gouv Temperature Dataset)
+
+  For example : [https://eco2mix.rte-france.com/download/eco2mix/eCO2mix_RTE_En-cours-TR.zip](eCO2mix_RTE_En-cours-TR)
+
+* The data which corresponds to half-hourly national temperature values (normal and actual) and actual pseudo-radiation values used by Enedis to establish and control regulatory energy balances (flow reconstitution) used for the production/consumption balance essential for maintaining the electricity network
+
+[https://www.data.gouv.fr/fr/datasets/donnees-de-temperature-et-de-pseudo-rayonnement-en-j-2/](Data.gouv Temperature Dataset)
 * The Tempo value for each day, on the ECO2Mix website [https://www.rte-france.com/en/eco2mix/download-indicators](ECO2Mix Indicators Website)
+
   For example : [https://eco2mix.rte-france.com/curves/downloadCalendrierTempo?season=22-23](ECO2MIX_Tempo_2022-2023)
 
 
 ### The Preprocessing
-The preprocessing is a classic one : one preprocess each dataset on his own and then merge the 3 in order to get one final big dataset, which is saved in a foder named "Data_Final".
+The preprocessing is a classic one : one preprocess each dataset on his own and then merge the 3 in order to get one final big dataset, which is saved in a folder named "Data_Final".
 
 We add the number of the weekday (0-6), if it is a schoolday or a public holday (0-1). Finally, one transform some variable into circulars ones in order to take into account the cyclical aspect of minutes/hours/days/months over the year.
 
@@ -97,9 +102,9 @@ I have chosen 4 models :
 
 ### The Metrics
 To compare them, I did 3 training sessions and compare their MAE and MAPE.
-* 1) Training between 2022-06-02 and 2024-03-08, which is 498 days. And comparison over 2 days following the train set.
-* 2) Comparison of results predictions over 2 days over 1 month apart (always stritcly 1 year's train)
-* 3) Comparison of results predictions over 2 days with 1 year and the previous days of the month (increasing the size of the train dataset each day)
+1) Training between 2022-06-02 and 2024-03-08, which is 498 days. And comparison over 2 days following the train set.
+2) Comparison of results predictions over 2 days over 1 month apart (always stritcly 1 year's train)
+3) Comparison of results predictions over 2 days with 1 year and the previous days of the month (increasing the size of the train dataset each day)
 
 ### Improvements
 Here is some improvments for this projects :
@@ -116,7 +121,7 @@ This section list any major frameworks/libraries used :
 
 * SKLearn
 * vacances_scolaires_france
-* [https://github.com/cerlymarco/linear-tree](Lineartree)
+* [https://github.com/cerlymarco/linear-tree][Lineartree]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
