@@ -142,3 +142,5 @@ Arthur DUBOIS - [@zebh0](https://twitter.com/zebh0) - arthurdubsm@gmail.com
 Project Link: [https://github.com/Zebho/Prediction_Consumption_French_Electricity?tab=readme-ov-file](https://github.com/Zebho/Prediction_Consumption_French_Electricity?tab=readme-ov-file)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+Thank you for your attention.
