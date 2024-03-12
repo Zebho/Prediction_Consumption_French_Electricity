@@ -74,14 +74,14 @@ All the data was retrieved from sites that make it freely and publicly available
 
 * The French electricity consumption in real time
 
-  For example : [https://eco2mix.rte-france.com/download/eco2mix/eCO2mix_RTE_En-cours-TR.zip](https://eco2mix.rte-france.com/download/eco2mix/eCO2mix_RTE_En-cours-TR.zip "Eco2mix En Cours")
+  For example : [Eco2mix En Cours](https://eco2mix.rte-france.com/download/eco2mix/eCO2mix_RTE_En-cours-TR.zip )
 
 * The data which corresponds to half-hourly national temperature values (normal and actual) and actual pseudo-radiation values used by Enedis to establish and control regulatory energy balances (flow reconstitution) used for the production/consumption balance essential for maintaining the electricity network
 
-  [https://www.data.gouv.fr/fr/datasets/donnees-de-temperature-et-de-pseudo-rayonnement-en-j-2/](https://www.data.gouv.fr/fr/datasets/donnees-de-temperature-et-de-pseudo-rayonnement-en-j-2/ "Data.gouv Temperature Dataset")
-* The Tempo value for each day, on the ECO2Mix website [https://www.rte-france.com/en/eco2mix/download-indicators](https://www.rte-france.com/en/eco2mix/download-indicators "ECO2Mix Indicators Website")
+  [Data.gouv Temperature Dataset](https://www.data.gouv.fr/fr/datasets/donnees-de-temperature-et-de-pseudo-rayonnement-en-j-2/ )
+* The Tempo value for each day, on the ECO2Mix website [ECO2Mix Indicators Website](https://www.rte-france.com/en/eco2mix/download-indicators )
 
-  For example : [https://eco2mix.rte-france.com/curves/downloadCalendrierTempo?season=22-23](https://eco2mix.rte-france.com/curves/downloadCalendrierTempo?season=22-23 "ECO2MIX_Tempo_2022-2023")
+  For example : [ECO2MIX_Tempo_2022-2023](https://eco2mix.rte-france.com/curves/downloadCalendrierTempo?season=22-23)
 
 
 ### The Preprocessing
