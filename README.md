@@ -121,7 +121,7 @@ This section list any major frameworks/libraries used :
 
 * SKLearn
 * vacances_scolaires_france
-* [https://github.com/cerlymarco/linear-tree][Lineartree]
+* [Lineartree](https://github.com/cerlymarco/linear-tree)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
