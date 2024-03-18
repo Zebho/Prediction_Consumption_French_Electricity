@@ -132,8 +132,6 @@ Distributed under the MIT License.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
 ## Contact
 
@@ -144,3 +142,4 @@ Project Link: [https://github.com/Zebho/Prediction_Consumption_French_Electricit
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 Thank you for your attention.
+Arthur DUBOIS

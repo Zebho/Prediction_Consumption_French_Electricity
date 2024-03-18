@@ -4,7 +4,7 @@ import numpy as np
 ####### Preprocessing Data ############
 def preprocessing_RTE_encours(df):
     '''
-    A faire sur le fichier RTE eCO2mix_RTE_En-cours-TR.csv
+    This preprocessing in on the file "RTE eCO2mix_RTE_En-cours-TR.csv"
     '''
     colum_keep = ['Date', 'Heures','Consommation']#,'Prévision J-1']
 
@@ -37,7 +37,7 @@ def preprocessing_RTE_encours(df):
 
 def preproc_temperature_ENEDIS(df):
     '''
-    A appliquer sur importation de
+    This preprocessing in on the file about temperatur eof ENEDIS
 
     '''
     colum_temp = ['horodate', 'temperature_realisee_lissee_degc',
@@ -53,7 +53,7 @@ def preproc_temperature_ENEDIS(df):
 
 def preproc_tempo(df_TEMPO_annee_n):
     '''
-    Pas de modif sur le fichier TEMPO
+    This preprocessing in on the file "TEMPO" of ECO2Mix
     '''
 
     df_TEMPO_annee_n.drop(df_TEMPO_annee_n.tail(1).index,inplace = True)
